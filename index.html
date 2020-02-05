@@ -38,7 +38,7 @@
 </style>
 
 <body class="body" align="center">
-    <form action="" method="post">
+    <form action="proses-tambah.php" method="post">
         <div class="kotak">
 
             <p align="center">
@@ -75,26 +75,5 @@
         </div>
     </form>
 </body>
-
-<?php
-
-include("koneksi.php");
-
-if (isset($_POST['Daftar'])) {
-
-    $Name = $_POST['Name'];
-    $Email = $_POST['Email'];
-    $Gender = $_POST['Gender'];
-    $City = $_POST['City'];
-    $Status = $_POST['Status'];
-
-    $sql = "INSERT INTO tb_test
-        (Name, Email, Gender, City, Status) VALUES 
-        ('$Name','$Email','$Gender','$City','$Status')";
-    $query = mysqli_query($con, $sql);
-} else {
-    die("Akses Dilarang....");
-}
-?>
 
 </html>
