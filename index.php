@@ -71,7 +71,7 @@
             <input type="checkbox" name="Status" value="Menikah">Menikah</th><br>
 
             <button type="submit" value="Daftar" name="Daftar" class="tombol">Daftar </button>
-            <br><a href="tabel.php">Tabel
+            <br><a href="tabel.php">Tabel</a>
         </div>
     </form>
 </body>
@@ -92,12 +92,6 @@ if (isset($_POST['Daftar'])) {
         (Name, Email, Gender, City, Status) VALUES 
         ('$Name','$Email','$Gender','$City','$Status')";
     $query = mysqli_query($con, $sql);
-
-    if ($query) {
-        header('Location: test.php?status=sukses');
-    } else {
-        header('Location: test.php?status=gagal');
-    }
 } else {
     die("Akses Dilarang....");
 }
